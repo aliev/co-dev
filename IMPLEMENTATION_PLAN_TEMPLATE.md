@@ -2,7 +2,6 @@
 # Implementation Plan — DO NOT COMMIT
 metadata:
   prd_path: {path/to/PRD.md}
-  branch_name: {branch_name}  # Reflects PRD goal
 ---
 
 ## Context & Goal
@@ -22,10 +21,9 @@ metadata:
 - Describe-before-code, wait for approval.
 - Human can annotate with `# HUMAN:` (code) or `<!-- HUMAN: -->` (plan).
 - Respect edits but critically evaluate.
-- After a successful commit, update the corresponding step’s **Status** in this plan (e.g., change to "committed" and add commit reference).
-
-## Branch
-- Name: {branch_name}
+- Track each step’s **Status** using only `pending`, `review`, or `committed`.
+- When a step is submitted for review (plan or code), set its status to `review`; if rework is required, move it back to `pending`.
+- After a successful commit, update the corresponding step’s status to `committed` and add the commit reference.
 
 ## Step Log
 | ID | Title | Status | Commit |
@@ -52,4 +50,4 @@ metadata:
 - Commit msg: `feat: …`
 - Questions: …
 
-**Status:** pending / needs changes / approved / committed
+**Status:** pending / review / committed
