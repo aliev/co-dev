@@ -1,0 +1,17 @@
+{
+  "context": {
+    "always_include": [
+      "AGENTS_IMPROVED.md",
+      "IMPLEMENTATION_PLAN_TEMPLATE_IMPROVED.md"
+    ],
+    "shortcuts": {
+      "plan": "Use IMPLEMENTATION_PLAN_TEMPLATE_IMPROVED.md",
+      "commit": "Follow commit format from AGENTS_IMPROVED.md"
+    }
+  },
+  "behavior": {
+    "default_status": "pending",
+    "require_approval": true,
+    "one_step_at_time": true
+  }
+}
